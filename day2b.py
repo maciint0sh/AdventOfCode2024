@@ -1045,14 +1045,13 @@ for report in reports:
     
     # print(report)
     dampened_safes = 0
-    for j in range(len(original_report)-1):
+    for j in range(len(original_report)):
+        print()
         report = original_report[:]
-        # print(j)
-        # print(len(report))
-        # print(len(original_report))
+        print(report)
         report.pop(j)
+        print(report)
 
-        # print(report_safe)
         if check_report(report) == True:
             dampened_safes += 1
     if dampened_safes > 0:
